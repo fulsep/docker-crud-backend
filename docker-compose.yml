@@ -1,0 +1,13 @@
+services:
+  backend-app:
+    build: .
+    ports:
+      - 8081:8888
+    restart: always
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=1
+    volumes:
+      - ./base.sql:/docker-entrypoint-initdb.d/base.sql:ro
+    restart: always
