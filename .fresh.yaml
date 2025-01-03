@@ -1,3 +1,6 @@
+# Using fresh
+# go install github.com/zzwx/fresh@latest
+
 version: "1"
 root: .
 main_path: ""
